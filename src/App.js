@@ -4,8 +4,9 @@ import { store } from './store/store';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { purple, blue, orange } from '@mui/material/colors';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './global.css'
 import Routes from "./Routes";
-
+import { Loading } from "./view/components";
 
 const theme = createTheme({
   palette: {
@@ -54,6 +55,7 @@ const theme = createTheme({
 const App = () => (
   <Provider store={store}>
     <ThemeProvider theme={theme}>
+      <Loading/>
       <Routes />
     </ThemeProvider>
   </Provider>
