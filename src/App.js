@@ -1,6 +1,8 @@
 import React from "react";
+import { Provider } from 'react-redux';
+import { store } from './store/store';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { purple, blue,  orange } from '@mui/material/colors';
+import { purple, blue, orange } from '@mui/material/colors';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Routes from "./Routes";
 
@@ -45,22 +47,16 @@ const theme = createTheme({
         color: 'tuca'
       },
     },
-
-
-
-
-
-
-
   },
 });
 
 
 const App = () => (
-  <ThemeProvider theme={theme}>
-    <Routes/>
-  </ThemeProvider>
-
+  <Provider store={store}>
+    <ThemeProvider theme={theme}>
+      <Routes />
+    </ThemeProvider>
+  </Provider>
 
 )
 
