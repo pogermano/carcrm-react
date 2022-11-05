@@ -1,19 +1,17 @@
 import React from "react";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { purple, blue , red, orange} from '@mui/material/colors';
-import { Button, TextField, Select , MenuItem} from '@mui/material';
+import { purple, blue,  orange } from '@mui/material/colors';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {MdPayment} from 'react-icons/md';
-
+import Routes from "./Routes";
 
 
 const theme = createTheme({
-  palette: {   
-    
+  palette: {
+
     primary: {
       main: blue[700],
     },
-    secondary:   {
+    secondary: {
       main: purple[700],
     },
     tuca: {
@@ -21,50 +19,48 @@ const theme = createTheme({
       main: orange[500],
     }
 
-  }, 
+  },
   components: {
-   MuiButton: {
+    MuiButton: {
       defaultProps: {
         // The props to change the default for.
-        fullWidth: true, 
-        variant:'contained',
+        fullWidth: true,
+        variant: 'contained',
       },
     },
     MuiTextField: {
       defaultProps: {
         // The props to change the default for.
         fullWidth: true,
-        variant:'outlined',
+        variant: 'outlined',
         color: 'tuca'
       },
-   },
-
-   MuiSelect: {
-    defaultProps: {
-      // The props to change the default for.
-      fullWidth: true,
-      variant:'outlined',
-      color: 'tuca'
     },
-   },
 
-   
+    MuiSelect: {
+      defaultProps: {
+        // The props to change the default for.
+        fullWidth: true,
+        variant: 'outlined',
+        color: 'tuca'
+      },
+    },
 
 
 
 
 
-},
+
+
+  },
 });
 
 
 const App = () => (
   <ThemeProvider theme={theme}>
-    <h1 className="text-danger"> APLICACAO REACT </h1>
-<MdPayment style={{fontSize:'60px', color: 'red'}}/>
-
+    <Routes/>
   </ThemeProvider>
- 
+
 
 )
 
