@@ -2,6 +2,10 @@ import React from "react";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { purple, blue , red, orange} from '@mui/material/colors';
 import { Button, TextField, Select , MenuItem} from '@mui/material';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {MdPayment} from 'react-icons/md';
+
+
 
 const theme = createTheme({
   palette: {   
@@ -56,33 +60,8 @@ const theme = createTheme({
 
 const App = () => (
   <ThemeProvider theme={theme}>
-    <h1> APLICACAO REACT </h1>
-    <Button  sx={{ m: 1 }} >
-    Dashed
-  </Button>
-  <Button   sx={{ m: 1 }}>
-    Secondary
-  </Button>
-  <Button  size="large" sx={{ m: 1 }}>
-    Large
-  </Button>
-  <Button variant="contained" color="secondary" size="large" sx={{ m: 1 }}>
-  contained large
-  </Button>
-    <Button variant="text"  >Text</Button>
-   
-    <Button   sx={{ m: 1 }}>Outlined</Button>
-    <TextField  sx={{ mt: 5 }} />
-    <Button variant="contained" color="primary"  sx={{ m: 1 }}>Contained</Button>
-   
-    <Select
-    labelId="demo-simple-select-label"
-    id="demo-simple-select"
-  >
-    <MenuItem value={10}>Ten</MenuItem>
-    <MenuItem value={20}>Twenty</MenuItem>
-    <MenuItem value={30}>Thirty</MenuItem>
-  </Select>
+    <h1 className="text-danger"> APLICACAO REACT </h1>
+<MdPayment style={{fontSize:'60px', color: 'red'}}/>
 
   </ThemeProvider>
  
