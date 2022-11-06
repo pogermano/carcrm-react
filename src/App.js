@@ -6,7 +6,7 @@ import { purple, blue, orange, green, red } from '@mui/material/colors';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './global.css'
 import Routes from "./Routes";
-import { Loading, Notify } from "./view/components";
+import { Loading, Notify , Alert} from "./view/components";
 
 const theme = createTheme({
   palette: {
@@ -63,6 +63,7 @@ const theme = createTheme({
 const App = () => (
   <Provider store={store}>
     <ThemeProvider theme={theme}>
+      <Alert/>
       <Notify/>
       <Loading/>
       <Routes />
