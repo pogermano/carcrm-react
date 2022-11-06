@@ -6,7 +6,7 @@ import { purple, blue, orange, green, red } from '@mui/material/colors';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './global.css'
 import Routes from "./Routes";
-import { Loading, Notify , Alert} from "./view/components";
+import { Loading, Notify , Alert, Confirm} from "./view/components";
 
 const theme = createTheme({
   palette: {
@@ -36,7 +36,7 @@ const theme = createTheme({
       defaultProps: {
         // The props to change the default for.
         fullWidth: true,
-        variant: 'contained',
+        variant: 'contained'
       },
     },
     MuiTextField: {
@@ -56,6 +56,23 @@ const theme = createTheme({
         color: 'tuca'
       },
     },
+
+    MuiDialogTitle: {
+      defaultProps: {
+        // The props to change the default for.
+        fontSize: '0.9rem',
+      },
+    }, 
+    MuiButton: {
+      styleOverrides: {
+        // Name of the slot
+        root: {
+          // Some CSS
+          fontSize: '0.7rem',
+        },
+      },
+    },
+
   },
 });
 
@@ -63,7 +80,7 @@ const theme = createTheme({
 const App = () => (
   <Provider store={store}>
     <ThemeProvider theme={theme}>
-      <Alert/>
+       <Alert/>
       <Notify/>
       <Loading/>
       <Routes />
