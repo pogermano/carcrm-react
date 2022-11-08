@@ -2,11 +2,11 @@ import React from "react";
 import { Provider } from 'react-redux';
 import { store } from './store/store';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { purple, blue, orange, green, red } from '@mui/material/colors';
+import { purple, blue, green, red } from '@mui/material/colors';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './global.css'
 import Routes from "./Routes";
-import { Loading, Notify , Alert, Confirm} from "./view/components";
+import { Loading, Notify , Alert} from "./view/components";
 
 const theme = createTheme({
   palette: {
@@ -18,8 +18,7 @@ const theme = createTheme({
       main: purple[700],
     },
     tuca: {
-
-      main: orange[500],
+      main: '#005696',
     },
     success: {
 
@@ -37,6 +36,13 @@ const theme = createTheme({
         // The props to change the default for.
         fullWidth: true,
         variant: 'contained'
+      },
+      styleOverrides: {
+        // Name of the slot
+        root: {
+          // Some CSS
+          fontSize: '0.7rem',
+        },
       },
     },
     MuiTextField: {
@@ -63,16 +69,7 @@ const theme = createTheme({
         fontSize: '0.9rem',
       },
     }, 
-    MuiButton: {
-      styleOverrides: {
-        // Name of the slot
-        root: {
-          // Some CSS
-          fontSize: '0.7rem',
-        },
-      },
-    },
-
+  
   },
 });
 
