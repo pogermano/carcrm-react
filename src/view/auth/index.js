@@ -41,7 +41,17 @@ export default function auth() {
                             >
                                 Entrar
                             </Button>
+                            <Button
+                                variant='contained'
+                                color='primary'
+                                fullWidth
+                                size='large'
+                                className='mt-4 mb-4'
+                                onClick={ ()=> dispatch(login(credentials) )}
 
+                            >
+                                Entrar
+                            </Button>
                             {(success) &&
                             <Redirect to="/vehicles"/>
                         }
